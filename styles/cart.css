@@ -1,0 +1,109 @@
+@media (max-width: 767px) {
+  .cart__header {
+    width: 90% ;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .cart__body {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.8em;
+    padding: 1.2em 5% 10em;
+    row-gap: 1.4em;
+  }
+
+  .adress, .time, .client {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .cart__body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6em 2em 10em;
+    row-gap: 1.4em;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .cart {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .cart__body {
+    border: 1px solid var(--color-grey);
+    border-radius: 4px 4px 0 0;
+    background: white;
+    margin-top: 1em;
+  }
+
+  .cart__header {
+    padding: 0 1.1em;
+  }
+}
+
+
+
+@media (min-width: 1440px) {
+  .cart {
+    max-width: 1600px;
+  }
+
+  .cart__body {
+    display: grid;
+    grid-template:
+      "adress summary" auto
+      "time summary" auto
+      "client summary" auto
+      / 65% 1fr;
+    grid-row-gap: 1.4em;
+  }
+
+  .adress {
+    grid-area: adress;
+    padding: 1.6em 2em 0;
+  }
+
+  .time {
+    grid-area: time;
+    padding: 0 2em;
+  }
+
+  .client {
+    grid-area: client;
+    padding: 0 2em 10em;
+  }
+
+  .summary {
+    border-left: 1px solid var(--color-grey);
+    grid-area: summary;
+    padding: 1.6em 2em;
+  }
+}
+
+
+
+.text--blue {
+  color: var(--color-blue);
+}
+
+.text--small {
+  font-size: calc(1em - 2px);
+  line-height: 1.5em;
+}
+
+.text--bold {
+  font-family: 'PTRootUIWebBold', sans-serif;
+  font-weight: normal;
+}

@@ -1,0 +1,87 @@
+.adress-option__removed-radio:checked + .adress-option__label {
+  border-color: var(--color-blue);
+}
+
+.adress-option__label {
+  border: 2px solid var(--color-grey);
+  border-radius: 4px;
+  display: block;
+  height: 100%;
+  padding: 0.8em 1em;
+}
+
+.adress-option__price {
+  padding: 0.2em 0;
+}
+
+.adress__prev-btn,
+.adress__next-btn {
+  background: url('../icons/right.svg') no-repeat center;
+  background-size: auto 54%;
+  border: 1px solid var(--color-grey);
+  border-radius: 4px;
+  width: 1.8em;
+  height: 1.8em;
+  grid-area: next-btn;
+}
+
+.adress__prev-btn {
+  background-image: url('../icons/left.svg');
+  grid-area: prev-btn;
+}
+
+.adress__prev-btn:disabled,
+.adress__next-btn:disabled {
+  opacity: 0.25;
+}
+
+
+
+@media (max-width: 767px) {
+  .adress__prev-btn,
+  .adress__next-btn {
+    display: none;
+  }
+
+  .adress__swiper {
+    overflow-x: hidden;
+    margin: 0.8em 0;
+  }
+
+  .adress__list {
+    width: 1000%;
+    display: flex;
+    column-gap: 0.8%;
+  }
+
+  .adress__option { width: 8%; }
+}
+
+
+
+@media (min-width: 768px) {
+  .adress {
+    display: grid;
+    grid-template:
+      "title prev-btn next-btn" auto
+      "list list list" auto
+      "add-btn . ." auto
+      / 1fr min-content min-content;
+    justify-items: start;
+    align-items: center;
+    grid-gap: 0.8em;
+  }
+
+  .adress__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .adress__option { width: calc(50% - 0.5em); }
+
+  .adress__title { grid-area: title; }
+
+  .adress__swiper { grid-area: list; }
+
+  .adress__add-btn { grid-area: add-btn; }
+}

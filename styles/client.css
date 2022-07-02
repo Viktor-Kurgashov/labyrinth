@@ -1,0 +1,71 @@
+.custom-select {
+  position: relative;
+}
+
+.custom-select__title {
+  position: absolute;
+  z-index: 1;
+  left: 1em;
+  top: 0.8em;
+}
+
+.custom-select__select{
+  background: url('../icons/chevron.svg') no-repeat calc(100% - 0.8em) center;
+  background-size: 0.8em auto;
+  border: 1px solid var(--color-grey);
+  border-radius: 4px;
+  padding: 2em 2em 0.6em 0.8em;
+}
+
+
+
+@media (max-width: 767px) {
+  .client {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0.8em 1em;
+  }
+
+  .client__title,
+  .client__name-select,
+  .client__phone-select {
+    flex-grow: 1;
+  }
+
+  .client__add-phone-btn {
+    text-align: left;
+    max-width: 4.4em;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .client {
+    display: grid;
+    grid-template:
+      "title none" auto
+      "name phone" auto
+      "add-name add-phone" auto
+      / 60% 1fr;
+    justify-items: start;
+    grid-gap: 0.8em 1em;
+  }
+
+  .client__name-select {
+    grid-area: name;
+    justify-self: stretch;
+  }
+
+  .client__phone-select {
+    grid-area: phone;
+    justify-self: stretch;
+  }
+
+  .client__title { grid-area: title; }
+
+  .client__add-name-btn { grid-area: add-name; }
+
+  .client__add-phone-btn { grid-area: add-phone; }
+}

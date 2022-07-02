@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>labyrinth test</title>
+  <link rel="stylesheet" href="styles/tags.css">
+  <link rel="stylesheet" href="styles/cart.css">
+  <link rel="stylesheet" href="styles/adress.css">
+  <script src="scripts/adress-swiper.js" defer></script>
+  <link rel="stylesheet" href="styles/time.css">
+  <link rel="stylesheet" href="styles/client.css">
+  <link rel="stylesheet" href="styles/summary.css">
+  <script src="scripts/summary-popup.js" defer></script>
+  <link rel="stylesheet" href="styles/footer.css">
+</head>
+
+
+
+<body>
+  <main class="cart">
+    <h1 class="cart__header">Оформление заказа</h1>
+
+    <form class="cart__body">
+      <div class="adress cart__section">
+        <h2 class="adress__title">Доставка</h2>
+
+        <button class="adress__prev-btn"></button>
+        <button class="adress__next-btn"></button>
+
+        <div class="adress__swiper">
+          <ul class="adress__list">
+            <li class="adress__option adress-option">
+              <input class="adress-option__removed-radio" type="radio" name="adress" id="a1">
+
+              <label class="adress-option__label" for="a1">
+                <p><b>Почта России, курьер — 24-26 сент.</b></p>
+                <p class="adress-option__price">+367₽</p>
+                <p class="text--small">ул. Академика Королева, 73/3, Петропавловск- Камчатский, 683000</p>
+              </label>
+            </li>
+
+            <li class="adress__option adress-option">
+              <input class="adress-option__removed-radio" type="radio" name="adress" id="a2">
+
+              <label class="adress-option__label" for="a2">
+                <p><b>Лабиринт, курьер — 25 сен.</b></p>
+                <p class="adress-option__price">+200₽</p>
+                <p class="text--small">ул. Алексея Алексеева, 194 Б, Москва, 123456</p>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <button class="adress__add-btn text--blue">Выбрать новое место и способ</button>
+      </div>
+
+
+
+      <div class="time cart__section">
+        <label class="time-option">
+          <input class="time-option__removed-radio" type="radio" name="time">
+
+          <div class="time-option__body">
+            <p class="time-option__date"><b>вт, 25 сен</b></p>
+            <p class="time-option__time text--small">10:00–19:00</p>
+          </div>
+        </label>
+
+        <label class="time-option">
+          <input class="time-option__removed-radio" type="radio" name="time">
+
+          <div class="time-option__body">
+            <p class="time-option__date"><b>ср, 26 сен</b></p>
+            <p class="time-option__time text--small">10:00–19:00</p>
+          </div>
+        </label>
+
+        <button class="time__add-btn text--blue">Другие дата и время</button>
+
+        <label class="chbox">
+          <input class="chbox__removed-chbox" type="checkbox">
+          <div class="chbox__checkmark"></div>
+          <p class="chbox__title">Viber/СМС уведомления о статусе заказа</p>
+        </label>
+
+        <label class="chbox">
+          <input class="chbox__removed-chbox" type="checkbox">
+          <div class="chbox__checkmark"></div>
+          <p class="chbox__title">Оставить у двери (бесконтактная доставка)</p>
+        </label>
+      </div>
+
+
+
+      <div class="client cart__section">
+        <h2 class="client__title">Получатель</h2>
+
+        <button class="client__add-name-btn text--blue">Новый получатель</button>
+
+        <label class="client__name-select custom-select">
+          <p class="custom-select__title text--small">Имя и фамилия, как в паспорте</p>
+
+          <select class="custom-select__select text--bold">
+            <option class="custom-select__option">Константин Константинопольский</option>
+            <option class="custom-select__option">Константин Константинопольский</option>
+            <option class="custom-select__option">Константин Константинопольский</option>
+            <option class="custom-select__option">Константин Константинопольский</option>
+          </select>
+        </label>
+
+        <label class="client__phone-select custom-select">
+          <p class="custom-select__title text--small">Мобильный телефон</p>
+        
+          <select class="custom-select__select text--bold">
+            <option class="custom-select__option">+7 901 234-56-78</option>
+            <option class="custom-select__option">8 800 555 35 35</option>
+            <option class="custom-select__option">8 800 555 35 35</option>
+            <option class="custom-select__option">8 800 555 35 35</option>
+          </select>
+        </label>
+
+        <button class="client__add-phone-btn text--blue">Новый телефон</button>
+      </div>
+
+
+
+      <div class="summary">
+        <div class="summary__body">
+          <h2 class="summary__header">В заказе 5 товаров <span>(2 кг)</span></h2>
+
+          <table class="summary__table">
+            <tbody class="summary__table-body">
+              <tr class="summary__table-row">
+                <td>Цена товаров</td>
+                <td><b>29 456 ₽</b></td>
+              </tr>
+
+              <tr class="summary__table-row">
+                <td>Все скидки</td>
+                <td><b>–7 732 ₽</b></td>
+              </tr>
+
+              <tr class="summary__table-row summary__discount">
+                <td>Скидки за предоплату</td>
+                <td><b>-3%</b></td>
+              </tr>
+            </tbody>
+
+            <tfoot class="summary__table-footer">
+              <tr class="summary__table-row">
+                <td>К оплате</td>
+                <td><b>21 072 ₽</b></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </form>
+  </main>
+
+
+
+  <footer class="footer">
+    <div class="footer__body">
+      <p class="footer__mob-sum text--small text--bold"><span>К оплате:</span> 21 072 ₽</p>
+
+      <p class="footer__sum-caption">Итого к оплате на сайте:</p>
+
+      <button class="footer__open-popup-btn text--small text--blue text--bold">Подробнее</button>
+
+      <button class="footer__submit-btn text--bold">Оформить и оплатить</button>
+
+      <button class="footer__close-popup-btn text--bold">Закрыть подробности</button>
+    </div>
+  </footer>
+</body>
+
+</html>

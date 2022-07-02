@@ -1,0 +1,47 @@
+.time {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 0.4em 0.8em;
+}
+
+.time-option__removed-radio:checked + .time-option__body {
+  border-color: var(--color-blue);
+}
+
+.time-option__body {
+  border: 2px solid var(--color-grey);
+  border-radius: 4px;
+  padding: 0.8em 1em;
+}
+
+.time__add-btn {
+  line-height: 2.4em;
+}
+
+.chbox {
+  display: flex;
+  flex-basis: 100%;
+  column-gap: 0.6em;
+  padding: 0.2em 0;
+}
+
+.chbox__removed-chbox:checked + .chbox__checkmark {
+  opacity: 1;
+}
+
+.chbox__checkmark {
+  background: var(--color-blue) url('../icons/check.svg') no-repeat center;
+  background-size: 85% auto;
+  border-radius: 2px;
+  flex-shrink: 0;
+  width: 1.3em;
+  height: 1.3em;
+  opacity: 0.25;
+}
+
+@media (min-width: 500px) {
+  .time__add-btn + .chbox {
+    margin-top: 0.6em;
+  }
+}

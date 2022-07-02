@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'PTRootUIWebRegular';
+  src:
+    url('../fonts/PT-Root-UI_Regular.woff2') format('woff2'),
+    url('../fonts/PT-Root-UI_Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTRootUIWebBold';
+  src:
+    url('../fonts/PT-Root-UI_Bold.woff2') format('woff2'),
+    url('../fonts/PT-Root-UI_Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  --color-grey: #D6D6D6;
+  --color-blue: #065CC2;
+  --color-bg-grey: #F8F8F8;
+}
+
+body {
+  font-size: 17px;
+  line-height: 1.5em;
+  font-family: 'PTRootUIWebRegular', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--color-bg-grey);
+  color: #333333;
+  min-width: 320px;
+  min-height: 100vh;
+  padding-top: 2.5em;
+}
+
+h1 {
+  font-size: 27px;
+  line-height: 1.4em;
+  font-family: 'PTRootUIWebBold', sans-serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 21px;
+  line-height: 1.5em;
+  font-family: 'PTRootUIWebBold', sans-serif;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+b {
+  font-family: 'PTRootUIWebBold', sans-serif;
+  font-weight: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block
+}
+
+tbody,
+tfoot {
+  display: block;
+}
+
+input,
+textarea,
+button,
+select {
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  border: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+}
+
+label {
+  cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
