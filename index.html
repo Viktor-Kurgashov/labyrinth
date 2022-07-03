@@ -24,7 +24,7 @@
     <h1 class="cart__header">Оформление заказа</h1>
 
     <form class="cart__body">
-      <div class="adress cart__section">
+      <div class="adress">
         <h2 class="adress__title">Доставка</h2>
 
         <button class="adress__prev-btn"></button>
@@ -59,43 +59,55 @@
 
 
 
-      <div class="time cart__section">
-        <label class="time-option">
-          <input class="time-option__removed-radio" type="radio" name="time">
+      <div class="time">
+        <ul class="time__options">
+          <li>
+            <label class="time-option">
+              <input class="time-option__removed-radio" type="radio" name="time">
+            
+              <div class="time-option__body">
+                <p class="time-option__date"><b>вт, 25 сен</b></p>
+                <p class="time-option__time text--small">10:00–19:00</p>
+              </div>
+            </label>
+          </li>
 
-          <div class="time-option__body">
-            <p class="time-option__date"><b>вт, 25 сен</b></p>
-            <p class="time-option__time text--small">10:00–19:00</p>
-          </div>
-        </label>
-
-        <label class="time-option">
-          <input class="time-option__removed-radio" type="radio" name="time">
-
-          <div class="time-option__body">
-            <p class="time-option__date"><b>ср, 26 сен</b></p>
-            <p class="time-option__time text--small">10:00–19:00</p>
-          </div>
-        </label>
+          <li>
+            <label class="time-option">
+              <input class="time-option__removed-radio" type="radio" name="time">
+            
+              <div class="time-option__body">
+                <p class="time-option__date"><b>ср, 26 сен</b></p>
+                <p class="time-option__time text--small">10:00–19:00</p>
+              </div>
+            </label>
+          </li>
+        </ul>
 
         <button class="time__add-btn text--blue">Другие дата и время</button>
 
-        <label class="chbox">
-          <input class="chbox__removed-chbox" type="checkbox">
-          <div class="chbox__checkmark"></div>
-          <p class="chbox__title">Viber/СМС уведомления о статусе заказа</p>
-        </label>
+        <ul class="time__notes">
+          <li>
+            <label class="chbox">
+              <input class="chbox__removed-chbox" type="checkbox">
+              <div class="chbox__checkmark"></div>
+              <p class="chbox__title">Viber/СМС уведомления о статусе заказа</p>
+            </label>
+          </li>
 
-        <label class="chbox">
-          <input class="chbox__removed-chbox" type="checkbox">
-          <div class="chbox__checkmark"></div>
-          <p class="chbox__title">Оставить у двери (бесконтактная доставка)</p>
-        </label>
+          <li>
+            <label class="chbox">
+              <input class="chbox__removed-chbox" type="checkbox">
+              <div class="chbox__checkmark"></div>
+              <p class="chbox__title">Оставить у двери (бесконтактная доставка)</p>
+            </label>
+          </li>
+        </ul>
       </div>
 
 
 
-      <div class="client cart__section">
+      <div class="client">
         <h2 class="client__title">Получатель</h2>
 
         <button class="client__add-name-btn text--blue">Новый получатель</button>

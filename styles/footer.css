@@ -65,14 +65,12 @@
 
 @media (min-width: 768px) {
   .footer__body {
+    flex-direction: row-reverse;
     max-width: 1024px;
-    padding: 1em 1.6em;
+    padding: 1em 2em;
   }
 
-  .footer__mob-sum {
-    font-size: 1.25em;
-    order: 1;
-  }
+  .footer__mob-sum { font-size: 1.25em; }
 
   .footer__open-popup-btn { display: none; }
 }
@@ -88,9 +86,8 @@
   .footer__sum-caption {
     display: block;
     position: absolute;
-    right: 0;
+    left: calc(65% + 2em);
     top: calc(50% - 15px);
-    width: calc(35% - 1.6em);
   }
 
   .footer__mob-sum > span { display: none; }
